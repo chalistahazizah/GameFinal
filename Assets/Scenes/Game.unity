@@ -1487,6 +1487,7 @@ GameObject:
   - component: {fileID: 647662876}
   - component: {fileID: 647662875}
   - component: {fileID: 647662877}
+  - component: {fileID: 647662878}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1558,8 +1559,7 @@ Transform:
   m_LocalPosition: {x: 2.3, y: 1.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1619892908}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &647662875
@@ -1646,6 +1646,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a82b0d3451356f84ab0cd032653efe62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 70
+  jumpForce: 14
+--- !u!95 &647662878
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647662872}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5dbeabec19c6f4a458ad477fe8211889, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1619892905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,6 +1680,7 @@ GameObject:
   - component: {fileID: 1619892908}
   - component: {fileID: 1619892907}
   - component: {fileID: 1619892906}
+  - component: {fileID: 1619892909}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1732,12 +1756,25 @@ Transform:
   m_GameObject: {fileID: 1619892905}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 2.3, y: 1.05, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 647662874}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1619892909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619892905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b27a9bbc8668c4cb04ef3a9b3566c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 647662874}
 --- !u!1 &1738767330
 GameObject:
   m_ObjectHideFlags: 0
@@ -10406,5 +10443,6 @@ Tilemap:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1619892908}
   - {fileID: 294495373}
   - {fileID: 647662874}
